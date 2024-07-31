@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    animation: fadeInTitle 1s ease;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    animation: fadeInContainer 1s ease;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: #ee5253;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(238, 82, 83, 0.3);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ffeaa7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 0.5s ease-in;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: #55efc4;
+    animation: strikeThrough 0.5s ease forwards;
+}
+
+@keyframes strikeThrough {
+    from {
+        background: #ffeaa7;
+    }
+    to {
+        background: #55efc4;
+    }
+}
+
+li button {
+    background: none;
+    border: none;
+    color: #d63031;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+li button:hover {
+    color: #e17055;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
